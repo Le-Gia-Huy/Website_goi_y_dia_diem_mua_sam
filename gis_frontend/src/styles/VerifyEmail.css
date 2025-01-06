@@ -1,0 +1,52 @@
+.verified-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: grey;
+}
+  
+.verified-box {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+}
+
+.verified-label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.verified-input {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.verified-button-container {
+    text-align: center;
+}
+
+.resend-text {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #9400D3;
+}
+
+.resend-text:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 1024px) {
+    .verified-background {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: grey;
+        padding-left: 80vh;
+        padding-right: 80vh;
+    }
+}

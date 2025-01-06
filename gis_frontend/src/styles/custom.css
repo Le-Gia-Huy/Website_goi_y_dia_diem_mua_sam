@@ -1,0 +1,24 @@
+/* Cố định thanh navigation */
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #343a40;
+  /* Màu nền tương ứng với bg="dark" của react-bootstrap */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding-left: 10px;
+}
+
+.navigation .nav-link {
+  padding-left: 15px;
+}
+
+/* Đẩy nội dung xuống dưới thanh navigation */
+.content {
+  background: #f8f9fa;
+  /* Nền sáng cho nội dung */
+  min-height: calc(100vh - 56px);
+  /* Đảm bảo nội dung bao phủ toàn màn hình trừ navigation */
+}

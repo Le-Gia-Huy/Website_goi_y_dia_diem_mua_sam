@@ -1,0 +1,21 @@
+.user-box {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+}
+
+.user-label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.user-input {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.user-button-container {
+    text-align: center;
+}

@@ -1,0 +1,29 @@
+/* src/components/EditLocationForm.css */
+.edit-location-form label {
+  display: block;
+  margin: 10px 0;
+}
+
+.edit-location-form input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+}
+
+.edit-location-form button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-location-form .save-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.edit-location-form .cancel-button {
+  background-color: #dc3545;
+  color: white;
+}

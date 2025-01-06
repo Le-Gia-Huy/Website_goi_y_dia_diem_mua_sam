@@ -1,0 +1,312 @@
+/* Định nghĩa container bản đồ */
+.map-container {
+  height: calc(100vh - 70px); /* Điều chỉnh để vừa với modal */
+  width: 100%;
+  position: relative;
+}
+
+.map {
+  height: 100vh;
+  width: 100%;
+}
+
+/* Modal hiển thị thông tin */
+.info-modal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.info-modal.expanded {
+  height: 60%;
+  transform: translateY(0);
+  overflow: auto;
+}
+
+.info-modal.collapsed {
+  height: 70px;
+  transform: translateY(0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.info-modal img {
+  max-height: 150px; /* Giới hạn chiều cao ảnh */
+  object-fit: cover; /* Cắt ảnh phù hợp */
+}
+
+.info-modal p {
+  margin: 10px 16px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Thu gọn nội dung */
+.info-modal .description {
+  max-height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+/* Nút đóng */
+.close-button {
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Nút thu hẹp/mở rộng modal */
+.toggle-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.toggle-button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Các nút hành động */
+.modal-buttons {
+  margin: 16px;
+  display: flex;
+  gap: 10px;
+}
+
+.modal-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.modal-edit-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.modal-edit-button:hover {
+  background-color: #3e8e41;
+}
+
+.modal-delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.modal-delete-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Nút hành động popup */
+.popup-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-edit-button {
+  background-color: #007bff;
+  color: white;
+  margin-right: 10px;
+}
+
+.popup-delete-button {
+  background-color: red;
+  color: white;
+}
+
+/* Popup */
+.popup-container {
+  min-width: 200px;
+}
+
+.popup-buttons {
+  margin-top: 10px;
+}
+
+/* UserOnlyButton */
+.user-only-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.user-only-button:hover {
+  background: #0056b3;
+}
+
+/* Popup trong bản đồ */
+.leaflet-popup-content-wrapper {
+  background: #fff;
+  border-radius: 8px;
+  max-width: 300px; /* Tăng chiều rộng popup */
+  padding: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.leaflet-popup-tip {
+  background: #fff;
+}
+
+.leaflet-popup-content img {
+  max-width: 100%; /* Thêm hình ảnh mini trong popup */
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.comment-section {
+  margin-top: 20px;
+}
+
+.comment-section h3,
+.comments-list h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.comment-input,
+.rating-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add-comment-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-comment-button:hover {
+  background-color: #0056b3;
+}
+
+.comment-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.comment-item p {
+  max-height: 40px; /* Giới hạn chiều cao nội dung */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.comment-item:hover p {
+  max-height: none; /* Hiển thị đầy đủ khi hover */
+  white-space: normal; /* Cho phép xuống dòng */
+}
+
+.comment-item p strong {
+  color: #333; /* Làm nổi bật thông tin quan trọng */
+}
+
+.comments-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.comments-list::-webkit-scrollbar-thumb {
+  background-color: #bbb; /* Màu thanh cuộn */
+  border-radius: 10px;
+}
+
+.comments-list::-webkit-scrollbar-thumb:hover {
+  background-color: #888; /* Thay đổi màu khi hover */
+}
+
+.comments-list {
+  max-height: 200px; /* Giới hạn chiều cao tổng thể */
+  overflow-y: auto; /* Thêm cuộn dọc */
+}
+
+.delete-comment-button {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.delete-comment-button:hover {
+  background-color: #d32f2f;
+}
+
+.modal-buttons button {
+  font-size: 14px; /* Giảm kích thước chữ */
+  padding: 8px 10px; /* Giảm padding */
+}
+
+.add-comment-button,
+.delete-comment-button {
+  width: 100%; /* Tăng chiều rộng nút cho giao diện di động */
+  margin-top: 8px; /* Thêm khoảng cách giữa các nút */
+}
+
+.add-comment-button:active,
+.delete-comment-button:active {
+  transform: scale(0.98); /* Hiệu ứng khi nhấn nút */
+}
+
+@media screen and (max-width: 768px) {
+  .info-modal {
+    height: auto; /* Cho phép modal điều chỉnh chiều cao */
+    padding-bottom: 20px; /* Thêm khoảng cách cho cuộn nội dung */
+  }
+
+  .modal-buttons button {
+    padding: 6px 8px; /* Giảm padding để vừa trên màn hình nhỏ */
+    font-size: 12px; /* Giảm kích thước chữ */
+  }
+}

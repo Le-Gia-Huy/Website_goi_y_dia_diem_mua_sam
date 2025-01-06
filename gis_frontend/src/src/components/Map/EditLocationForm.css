@@ -1,0 +1,31 @@
+/* src/components/MapComponent.css */
+.map-container {
+  height: 100vh;
+  width: 100%;
+}
+
+.popup-container {
+  min-width: 200px;
+}
+
+.popup-buttons {
+  margin-top: 10px;
+}
+
+.popup-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-edit-button {
+  background-color: #007bff;
+  color: white;
+  margin-right: 10px;
+}
+
+.popup-delete-button {
+  background-color: red;
+  color: white;
+}

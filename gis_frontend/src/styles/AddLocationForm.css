@@ -1,0 +1,21 @@
+.box {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+}
+
+.label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.input {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.button-container {
+    text-align: center;
+}

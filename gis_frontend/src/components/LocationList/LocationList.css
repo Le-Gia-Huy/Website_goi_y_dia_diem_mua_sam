@@ -1,0 +1,92 @@
+.location-list-container {
+  position: fixed;
+  top: 220px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.location-list-button {
+  width: 24px;
+  height: 24px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.location-list-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1); /* Phóng to nhẹ khi hover */
+}
+
+/* Popup containing location list */
+.location-list-popup {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1001;
+  padding: 10px;
+  min-width: 300px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* List of locations */
+.location-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.location-list-item {
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.location-list-item:last-child {
+  border-bottom: none;
+}
+
+.location-list-item:hover {
+  background-color: #f9f9f9;
+}
+
+/* Location name styling */
+.location-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Location address styling */
+.location-address {
+  font-size: 12px;
+  color: #777;
+  margin-top: 4px;
+}
+
+.location-search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.no-results-message {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  margin-top: 10px;
+}
